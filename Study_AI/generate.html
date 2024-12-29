@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Study.AI</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jomhuria&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    </head>
+    <body>
+         <!--Navigation Bar-->
+         <nav class="nav-bar">
+            <div class="nav-bar-container">
+                <a href="test.html"><img src="images/BRAIN!.png" class="studyai" alt=""></a>
+                <a href="/index.html" id="navBarlogo">Study</a>
+                <a href="/index.html" id="navBarlogo2">.AI</a>
+                <div class="navBarToggle" id="mobileMenu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="nav-bar-menu">
+                    <li>
+                        <form action="/">
+                            <div class="search">
+                                <span class="searchIcon material-symbols-outlined">search</span>
+                                <input class="searchInput" type="search" placeholder="Search">
+                            </div>
+                        </form>
+                    </li>
+                    <li class="navBarItem">
+                        <a href="/generate.html" class="navBarLinks"><span class="material-symbols-outlined" style="border: solid white; border-radius: 50%; padding: 12px; background-color: #fff; color: grey; ">add</span></a>
+                    </li>
+                    <li class="navBarItem">
+                        <a href="/index.html" class="navBarLinks">Home</a>
+                    </li>
+                    <li class="navBarItem">
+                        <a href="/Info.html" class="navBarLinks"> Info </a>
+                    </li>
+                    <li class="navBarItem">
+                        <a class="navBarLinks" style="width: 55px; cursor: pointer;" onclick="popUp(); login()"> Log In </a>
+                    </li>
+                    <li class="navBarBTN">
+                        <a class="button" onclick="popUp(); signup()" style="font-size: 30px; cursor: pointer;" >Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Log In/Sign Up -->
+            <div class="hero" id="popup">
+                <div class="form-box">
+                    <h1 id="login-title">Log In</h1>
+                    <h1 id="signup-title" > Sign Up</h1>
+                    <div class="button-box">
+                        <div id="btn"></div>
+                        <button type="button" class="toggle-btn" onclick="login()" id="login-text-change"> Log In </button>
+                        <button type="button" class="toggle-btn" onclick="signup()" id="signup-text-change"> Sign Up </button>
+                    </div>
+                    <form class="input-group" id="login">
+                        <input type="text" class="input-field" placeholder="Username" required>
+                        <input type="password" class="input-field" placeholder="Password" required>
+                        <input type="checkbox" class="checkbox">
+                        <span class="span-text">Remember Password</span>
+                        <button type="submit" class="submit-btn">Log In</button>
+                    </form>
+                    <form class="input-group" id="signup">
+                        <input type="text" class="input-field" placeholder="Username" required>
+                        <input type="email" class="input-field" placeholder="Email" required>
+                        <input type="password" class="input-field" placeholder="Password" required>
+                        <input type="checkbox" class="checkbox">
+                        <span class="span-text">I agree to the terms & conditions</span>
+                        <button type="submit" class="submit-btn">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        
+        
+        <!-- Flash Card Generator-->
+        <div id="flash-card-generator">
+            <h1 class="generate-main-title">Create a New Set of Flash Cards</h1>
+            <div class="flash-card-info">
+                <div>
+                    <div class="big-info">
+                        <div class="text-info-create">
+                            <form action="/" id="title-form">
+                                <input id="title-input" placeholder="Untitled" class="input-text" name="title-input">
+                                <br>
+                                <label class="text-info-means">Add a Title</label>
+                            </form>
+                        </div>
+                        <div class="text-info-create">
+                            <a href="flashCard.html"><button id="gen-BTN" type="button" onclick="flashCard()">Generate</button></a>
+                        </div>
+                    </div>
+                    <div class="big-info">
+                        <div class="text-info-create">
+                            <form action="/" id="/">
+                                <input id="mytext0" placeholder="Untitled" class="input-text">
+                                <br>
+                                <label class="text-info-means">Add a Description</label>
+                            </form>
+                        </div>
+                        <div class="text-info-create" style="margin: 0 0 0 7rem;">
+                            <form action="/">
+                                <input id="subject-input" placeholder="Untitled" class="input-text" style="width: 27rem;" name="subject-input">
+                                <br>
+                                <label class="text-info-means">Add a Subject</label>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="flash-card-gen-whole">
+                <div class="flash-card-gen">
+                    <h1 class="flash-card-number">1</h1>
+                    <div class="text-info-whole">
+                        <input id="flash-term-1" placeholder="Untitled" class="input-text-card" name="flash-term">
+                        <br>
+                        <label class="text-info-means-card">Add a Term</label>
+                    </div>
+                    <div class="text-info-whole">
+                        <input id="flash-def-1" placeholder="Untitled" class="input-text-card" name="flash-def">
+                        <br>
+                        <label class="text-info-means-card">Add a Definition</label>
+                    </div>
+                </div>
+                <div class="flash-card-gen">
+                    <h1 class="flash-card-number">2</h1>
+                    <div class="text-info-whole">
+                        <input id="flash-term-2" placeholder="Untitled" class="input-text-card" name="flash-term">
+                        <br>
+                        <label class="text-info-means-card">Add a Term</label>
+                    </div>
+                    <div class="text-info-whole">
+                        <input id="flash-def-2" placeholder="Untitled" class="input-text-card" name="flash-def">
+                        <br>
+                        <label class="text-info-means-card">Add a Definition</label>
+                    </div>
+                </div>
+                <div class="flash-card-gen">
+                    <h1 class="flash-card-number">3</h1>
+                    <div class="text-info-whole">
+                        <input id="flash-term-3" placeholder="Untitled" class="input-text-card" name="flash-term">
+                        <br>
+                        <label class="text-info-means-card">Add a Term</label>
+                    </div>
+                    <div class="text-info-whole">
+                        <input id="flash-def-3" placeholder="Untitled" class="input-text-card" name="flash-def">
+                        <br>
+                        <label class="text-info-means-card">Add a Definition</label>
+                    </div>
+                </div>
+                <div class="flash-card-gen">
+                    <h1 class="flash-card-number">4</h1>
+                    <div class="text-info-whole">
+                        <input id="flash-term-4" placeholder="Untitled" class="input-text-card" name="flash-term">
+                        <br>
+                        <label class="text-info-means-card">Add a Term</label>
+                    </div>
+                    <div class="text-info-whole">
+                        <input id="flash-def-4" placeholder="Untitled" class="input-text-card" name="flash-def">
+                        <br>
+                        <label class="text-info-means-card">Add a Definition</label>
+                    </div>
+                </div>
+                <div class="flash-card-gen" id="duplicate-div">
+                    <h1 class="flash-card-number" id="number-change">5</h1>
+                    <div class="text-info-whole">
+                        <input id="flash-term-5" placeholder="Untitled" class="input-text-card" name="flash-term">
+                        <br>
+                        <label class="text-info-means-card">Add a Term</label>
+                    </div>
+                    <div class="text-info-whole">
+                        <input id="flash-def-5" placeholder="Untitled" class="input-text-card" name="flash-def">
+                        <br>
+                        <label class="text-info-means-card">Add a Definition</label>
+                    </div>
+                </div>
+            </div>
+            <div id="Add-card">
+                <button id="Add-card-BTN" onclick="addCard()">+ Add card</button>
+            </div>
+        </div>
+    
+
+    
+
+       
+        <!-- Footer Section-->
+        <div class="footerContainer">
+            <div class="footerLinks">
+            <div class="footerLinkWrapper">
+                <div class="footerLinkItems">
+                    <h2>About Us</h2>
+                    <a href="/">How it works</a>
+                    <a href="/">Blank</a>
+                    <a href="/">Blank</a>
+                    <a href="/">blank</a>
+                    <a href="/">Terms of Service</a>
+                </div>
+                <div class="footerLinkItems">
+                    <h2>Contact Us</h2>
+                    <a href="/">Contact</a>
+                    <a href="/">Support</a>
+                    <a href="/">Destinations</a>
+                    <a href="/">Sponsorships</a>
+                    
+                </div>
+            </div>
+            <div class="footerLinkWrapper">
+                <div class="footerLinkItems">
+                    <h2>Videos</h2>
+                    <a href="/">Sumbit Video</a>
+                    <a href="/">Ambassadors</a>
+                    <a href="/">Agency</a>
+                    <a href="/">Influencer</a>
+                
+                </div>
+                <div class="footerLinkItems">
+                    <h2>Social Media</h2>
+                    <a href="/">Twiter</a>
+                    <a href="/">Facebook</a>
+                    <a href="/">Youtube</a>
+                    <a href="/">Instagram</a>
+                    <a href="/">Linkedin</a>
+                </div>
+            </div>
+            <div class="footerLinkWrapper">
+                <div class="footerLinkItems">
+                    
+                    <a href="/"></a>
+                    <a href="/"></a>
+                    <a href="/"></a>
+                    <a href="/"></a>
+                    <a href="/"></a>
+                </div>
+                <div class="footerLinkItems">
+                    
+                    <a href="/"></a>
+                    <a href="/"></a>
+                    <a href="/"></a>
+                    <a href="/"></a>
+                    <a href="/"></a>
+                </div>
+            </div>
+        </div>
+            <div class="socialMedia">
+                <div class="socialMediaWrap">
+                    <div class="footerLogo">
+                        <a href="/" id="footerLogo"><i class="Study.AI"></i>Study.AI</a>
+                    </div>
+                    <p class="websiteRights"> © Study.AI 2024. All rights reserved</p>
+                    <div class="socialIcons">
+                        <a href="/" class="socialIconLink" target="blank"><i class="facebook"></i></a>
+                        <a href="/" class="socialIconLink" target="blank"><i class="instagram"></i></a>
+                        <a href="/" class="socialIconLink" target="blank"><i class="Twitter"></i></a>
+                        <a href="/" class="socialIconLink" target="blank"><i class="Linkedin"></i></a>
+                        <a href="/" class="socialIconLink" target="blank"><i class="Youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
